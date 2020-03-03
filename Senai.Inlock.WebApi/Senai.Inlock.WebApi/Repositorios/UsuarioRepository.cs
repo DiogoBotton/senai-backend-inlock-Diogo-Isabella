@@ -32,5 +32,7 @@ namespace Senai.Inlock.WebApi.Repositorios
             _context.SaveChanges();
             return retorno;
         }
+
+
     }
 }

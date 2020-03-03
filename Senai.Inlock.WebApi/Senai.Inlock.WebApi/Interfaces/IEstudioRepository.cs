@@ -10,5 +10,7 @@ namespace Senai.Inlock.WebApi.Interfaces
     {
         Estudio GetById(int id);
         List<Estudio> GetAll();
+        Estudio Create(Estudio estudio);
+        void Deletar(Estudio estudio);
     }
 }

@@ -10,5 +10,7 @@ namespace Senai.Inlock.WebApi.Interfaces
     {
         Jogo Create(Jogo jogo);
         List<Jogo> GetAll();
+        Jogo GetById(int id);
+        void Deletar(Jogo jogo);
     }
 }

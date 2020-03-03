@@ -28,9 +28,19 @@ namespace Senai.Inlock.WebApi.Repositorios
             return retorno;
         }
 
+        public void Deletar(Jogo jogo)
+        {
+            _context.Jogos.Remove(jogo);
+            _context.SaveChanges();
+        }
+
         public List<Jogo> GetAll()
         {
             return _context.Jogos.ToList();
+        }
+        public Jogo GetById(int id)
+        {
+            return _context.Jogos.FirstOrDefault(x => x.Id == id);
         }
     }
 }

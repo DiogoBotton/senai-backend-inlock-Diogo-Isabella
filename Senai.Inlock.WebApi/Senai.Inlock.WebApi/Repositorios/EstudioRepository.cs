@@ -20,6 +20,14 @@ namespace Senai.Inlock.WebApi.Repositorios
         {
             _context = context;
         }
+        public Estudio Create(Estudio estudio)
+        {
+            var EstudioCriado = _context.Estudios.Add(estudio).Entity;
+
+            _context.SaveChanges();
+
+            return EstudioCriado;
+        }
 
         public Estudio GetById(int id)
         {
@@ -28,7 +36,12 @@ namespace Senai.Inlock.WebApi.Repositorios
         public List<Estudio> GetAll()
         {
             return _context.Estudios.ToList();
-            
+        }
+
+        public void Deletar (Estudio estudio)
+        {
+            _context.Estudios.Remove(estudio);
+            _context.SaveChanges();
         }
     }
 }
